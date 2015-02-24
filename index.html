@@ -240,9 +240,9 @@ if (window.jstiming) window.jstiming.load.tick('headEnd');
 <a id='previewlink' onclick='ifrem.document.write(editAreaLoader.getValue("kodburada"));ifrem.document.close();ifrem.focus();'>Preview</a>
 <div style='display:inline-block;width:59%;float:right;'>
 <a class='buton' onclick='displayHTML();' style='width:51%;font-size:14px;'>in a new page</a>
-<a class='buton' onclick='if(editAreaLoader.getSelectedText("kodburada").length <= 1){alert("Önce metin seçin!");}else{document.getElementById("hazirkod").className="kutu"}' style='width:42%;font-size:14px;float:right;'>araçlar</a>
-<a class='buton' onclick='koddostusave(this,0);' style='width:51%;font-size:14px;'>seçimi kaydet</a>
-<a class='buton' onclick='koddostusave(this,1);' style='width:42%;font-size:14px;float:right;'>kaydet</a>
+<a class='buton' onclick='if(editAreaLoader.getSelectedText("kodburada").length <= 1){alert("select text first!");}else{document.getElementById("hazirkod").className="kutu"}' style='width:42%;font-size:14px;float:right;'>tools</a>
+<a class='buton' onclick='koddostusave(this,0);' style='width:51%;font-size:14px;'>save selected</a>
+<a class='buton' onclick='koddostusave(this,1);' style='width:42%;font-size:14px;float:right;'>save</a>
 </div>
 </div>
 <a onclick='this.parentNode.parentNode.style.display=&#39;none&#39;;document.body.style.overflowY=&#39;auto&#39;;' style='padding:0 6px;cursor:pointer;color:#fff;position:absolute;bottom:3px;right:18px;z-index:999999;background:#222;'>Yenilikler & Blog</a>
@@ -254,16 +254,16 @@ if (window.jstiming) window.jstiming.load.tick('headEnd');
 </script>
 <textarea id='kodburada' name='content' style='background:#546e7a;word-wrap:normal;'>
  
-   Merhaba!
+   Hi!
 
-   Buraya kodlarınızı girip, Önizle ye tıklayın!
+   Type your code here, then click Preview!
 
-	İşte bir yazı örneği:
+	An example of a simple text code:
 
-	<span style='color:red'> YAZI </span>
+	<span style='color:red'> bla bla </span>
 
 
-	WINDOWS + A kombinasyonuyla Emmet kodlamalarını çevirebilirsiniz:
+	use "WINDOWS + A" buttons for emmet:
 
 	html:5>div#container>ul>li*8>a{yazı $}
 </textarea>
@@ -286,7 +286,7 @@ document.getElementById('ifrem').style.height=sayhey;
 
 </script>
 <div class='kutu kapalu' id='hazirkod'>
-<h2 style='text-align:center;font-weight:normal !important;'>Koddostu.com Hazır Kod Araçları</h2>
+<h2 style='text-align:center;font-weight:normal !important;'>Koddostu.com Code Snippets</h2>
 <br/>
 <p>Seçili metne hangi değişikliğin uygulanmasını istersiniz?</p>
 <br/>
